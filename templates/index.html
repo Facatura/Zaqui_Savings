@@ -1,16 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Gastos</title>
     <link rel="stylesheet" href="static/style.css">
-    <title>Zaqui Savings</title>
-  </head>
-  <body>
-    <header>
-      <h1>Welcome to Zaqui Savings</h1>
-    </header>
+</head>
+<body>
 
-  </body>
-  <script src="static/script.js"></script>
+    <div class="contenedor-app">
+        <header class="barra-superior">
+            <h1 class="nombre-usuario">Username</h1>
+            <div class="icono-perfil">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+            </div>
+        </header>
+
+        <main class="panel-principal">
+            
+            <section class="seccion-superior">
+                <div class="tarjeta-saldo-principal">
+                    <div class="pestañas">
+                        <span class="pestaña activa">Total</span>
+                        <span class="separador">|</span>
+                        <span class="pestaña">Usable</span>
+                    </div>
+                    <div class="monto-principal">
+                        <h2 id="saldo-total">$70.000</h2>
+                    </div>
+                </div>
+
+                <div class="cuadricula-cuentas">
+                    <div class="item-cuenta">
+                        <span class="etiqueta-cuenta">B. Virtuales</span>
+                        <div class="monto-cuenta" id="monto-mp">$70.000</div>
+                    </div>
+                    <div class="item-cuenta">
+                        <span class="etiqueta-cuenta">Guardado</span>
+                        <div class="monto-cuenta" id="monto-guardado">$70.000</div>
+                    </div>
+                    <div class="item-cuenta">
+                        <span class="etiqueta-cuenta">Billetera</span>
+                        <div class="monto-cuenta" id="monto-billetera">$70.000</div>
+                    </div>
+                    <div class="item-cuenta">
+                        <span class="etiqueta-cuenta">Dolares</span>
+                        <div class="monto-cuenta" id="monto-otras">$70.000</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="seccion-botones">
+                <button class="btn btn-ingreso" id="btn-ingreso">Ingreso</button>
+                <button class="btn btn-gasto" id="btn-gasto">Gasto</button>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+<script src="static/script.js"></script>
 </html>
